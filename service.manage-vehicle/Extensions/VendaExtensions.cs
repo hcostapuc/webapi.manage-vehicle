@@ -19,7 +19,6 @@ namespace service.manage_vehicle.Extensions
                 vendaEntity.Data = vendaNew.Data;
                 vendaEntity.Vendedor = vendaNew.Vendedor;
                 vendaEntity.Status = vendaEntity.Status;
-                vendaEntity.Veiculos = vendaNew.Veiculos;
                 return true;
             }
             else
