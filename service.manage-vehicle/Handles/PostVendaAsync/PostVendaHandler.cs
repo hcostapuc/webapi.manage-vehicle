@@ -27,7 +27,7 @@ namespace service.manage_vehicle.Services
             var venda = mapper.Map<VendaDTO, VendaEntity>(request.VendaDTO);
 
 
-            if (!venda.TryValid(out string erros)) 
+            if (!venda.TryValid(out string erros))
                 return new BadRequestObjectResult(erros);
 
             venda.Status = StatusVenda.ConfirmacaoPagamento;

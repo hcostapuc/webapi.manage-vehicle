@@ -2,6 +2,7 @@ using AutoMapper;
 using infrastructure.manage_vehicle.Context;
 using infrastructure.manage_vehicle.Interfaces;
 using infrastructure.manage_vehicle.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using service.manage_vehicle.Configuration;
 using System;
-using MediatR;
 using System.Text.Json.Serialization;
 
 namespace webapi.manage_vehicle
@@ -56,7 +56,8 @@ namespace webapi.manage_vehicle
                     Title = "API Manage Vehicle",
                     Version = "v2",
                     Description = "Sample service for Learner",
-                    Contact = new Microsoft.OpenApi.Models.OpenApiContact { 
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                    {
                         Email = "hcostapuc@gmail.com",
                         Name = "Hebert Costa Andrade",
                         Url = new System.Uri("https://github.com/hcostapuc")

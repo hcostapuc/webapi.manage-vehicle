@@ -2,7 +2,6 @@
 using domain.manage_vehicle.Entity;
 using domain.manage_vehicle.Entity.Venda;
 using service.manage_vehicle.DTO;
-using System.Collections.Generic;
 
 namespace service.manage_vehicle.Configuration
 {

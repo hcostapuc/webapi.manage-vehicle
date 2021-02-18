@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using domain.manage_vehicle.Entity.Venda;
-using service.manage_vehicle.DTO;
+﻿using domain.manage_vehicle.Entity.Venda;
 using System;
 using System.Linq;
 using System.Text;
@@ -13,7 +11,7 @@ namespace service.manage_vehicle.Extensions
         {
             msg = String.Empty;
 
-            if (vendaEntity != null && TryValidStatus(vendaNew.Status,vendaEntity.Status))
+            if (vendaEntity != null && TryValidStatus(vendaNew.Status, vendaEntity.Status))
             {
                 vendaEntity.Status = vendaEntity.Status;
                 return true;

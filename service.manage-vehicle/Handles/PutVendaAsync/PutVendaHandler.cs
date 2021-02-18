@@ -23,7 +23,7 @@ namespace service.manage_vehicle.Services
         }
         public async Task<ObjectResult> Handle(PutVendaRequest request, CancellationToken cancellationToken)
         {
-            var vendaNew =  mapper.Map<VendaDTO,VendaEntity>(request.VendaDTO);
+            var vendaNew = mapper.Map<VendaDTO, VendaEntity>(request.VendaDTO);
 
             if (!vendaNew.TryValid(out string erros))
                 return new BadRequestObjectResult(erros);
@@ -35,7 +35,7 @@ namespace service.manage_vehicle.Services
             if (vendaOld == null)
                 return new NotFoundObjectResult($"Venda de codigo: {vendaNew.Codigo} não encontrada");
 
-            if (!vendaOld.MergeFrom(vendaNew, out string error)) 
+            if (!vendaOld.MergeFrom(vendaNew, out string error))
                 return new BadRequestObjectResult(error);
 
             await vendaRepository.UpdateAsync(vendaOld);
