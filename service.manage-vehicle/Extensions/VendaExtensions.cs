@@ -15,9 +15,6 @@ namespace service.manage_vehicle.Extensions
 
             if (vendaEntity != null && TryValidStatus(vendaNew.Status,vendaEntity.Status))
             {
-                vendaEntity.Veiculos = null;
-                vendaEntity.Data = vendaNew.Data;
-                vendaEntity.Vendedor = vendaNew.Vendedor;
                 vendaEntity.Status = vendaEntity.Status;
                 return true;
             }
