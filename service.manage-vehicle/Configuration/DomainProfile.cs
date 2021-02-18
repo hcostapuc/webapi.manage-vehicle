@@ -12,7 +12,6 @@ namespace service.manage_vehicle.Configuration
             CreateMap<VendaEntity, VendaDTO>().ReverseMap();
             CreateMap<VendedorEntity, VendedorDTO>().ReverseMap();
             CreateMap<VeiculoEntity, VeiculoDTO>().ReverseMap();
-            //CreateMap<IEnumerable<VeiculoEntity>, IEnumerable<VeiculoDTO>>().ReverseMap();
         }
     }
 }
