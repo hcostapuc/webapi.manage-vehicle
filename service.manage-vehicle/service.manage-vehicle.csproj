@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>service.manage_vehicle</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Handles\VendaHandler.cs~RF5d1633.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\domain.manage-vehicle\domain.manage-vehicle.csproj" />
+    <ProjectReference Include="..\infrastructure.manage-vehicle\infrastructure.manage-vehicle.csproj" />
+  </ItemGroup>
+
+</Project>
